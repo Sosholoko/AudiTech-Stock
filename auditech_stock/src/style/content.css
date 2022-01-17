@@ -1,0 +1,70 @@
+.title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.card_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 95%;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  /* border: 1px solid white; */
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.384);
+}
+
+#stock_sn {
+  position: relative;
+  top: 20px;
+  left: 35px;
+  z-index: -1;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  background: url(../pics/finance.png);
+  margin-top: 35px;
+  margin-left: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_info_det {
+  margin-top: 10px;
+}
+
+.card_info h4 {
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.more_btn {
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  height: 35px;
+  width: 50px;
+  margin-top: 80px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.not_logged_page {
+  text-align: center;
+  margin-top: 100px;
+}
+.not_logged_page h1 {
+  font-size: 50px;
+}

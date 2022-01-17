@@ -1,0 +1,19 @@
+.profile_section img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  float: right;
+}
+
+.profile_section {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: rgba(98, 98, 98, 0.479);
+  color: white;
+  font-weight: bolder;
+  padding: 10px;
+  width: 20%;
+  height: 120px;
+  float: right;
+  margin-top: 20px;
+}
