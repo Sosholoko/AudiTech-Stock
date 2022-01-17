@@ -32,7 +32,7 @@ export default function Modal(props) {
               <br />
               <span id="snex">
                 {props.shortName} → {props.exchange}
-              </span>{" "}
+              </span>
               <br />
               <br />
               <h4>Exchange Delay : {props.exchangeDelay} sec</h4>

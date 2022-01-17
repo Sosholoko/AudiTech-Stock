@@ -29,13 +29,12 @@ const StockContent = () => {
           setSelectMarket(results[0].market);
           setFilteredDatas(results);
           setDatas(results);
-          console.log(results);
         })
         .catch(function (error) {
           console.error(error);
         });
     }
-  }, []);
+  }, [isAuthenticated]);
 
   const handleChange = (e) => {
     setSelectFil(e.target.value);
@@ -45,7 +44,6 @@ const StockContent = () => {
   };
 
   const findMatch = (selected, selected2) => {
-    debugger;
     const oldState = [...datas];
     if (selectFil) {
       const matchData = oldState.filter((data) => data.exchange === selected);
@@ -79,6 +77,9 @@ const StockContent = () => {
               <option value="" disabled selected>
                 Select an Exchange
               </option>
+              <option value="" selected>
+                Off
+              </option>
               {datas.map((data) => {
                 return (
                   <>
@@ -91,14 +92,19 @@ const StockContent = () => {
               <option value="" disabled selected>
                 Select an Market
               </option>
+              <option value="" selected>
+                Off
+              </option>
               {datas.map((data) => {
                 return <option>{data.market}</option>;
               })}
             </select>
             <br />
-            <button onClick={() => findMatch(selectFil, selectMarket)}>Filter</button>
+            <button onClick={() => findMatch(selectFil, selectMarket)}>
+              Filter <i class="fas fa-search"></i>
+            </button>
             <button id="clr_btn" onClick={() => setFilteredDatas(datas)}>
-              Clear
+              Clear <i class="far fa-times-circle"></i>
             </button>
           </div>
           <div className="card_content">
@@ -116,19 +122,15 @@ const StockContent = () => {
                           <span>Exchange </span>: {data.exchange}
                         </h4>
                         <h4>
-                          {" "}
                           <span>Market</span> : {data.market}
                         </h4>
                         <h4>
-                          {" "}
                           <span>TimeZone </span>: {data.exchangeTimezoneName}
                         </h4>
                         <h4>
-                          {" "}
                           <span>Change Rate </span>: {data.regularMarketChangePercent.fmt}
                         </h4>
                         <h4>
-                          {" "}
                           <span>Market Price </span>: {data.regularMarketPrice.fmt} $
                         </h4>
                       </div>
@@ -162,7 +164,9 @@ const StockContent = () => {
               })}
             {filteredDatas.length <= 0 ? (
               <>
-                <h2 style={{ color: "rgb(197, 103, 103)" }}>No results were found for your search ! Please try again</h2>
+                <h2 style={{ color: "rgb(197, 103, 103)", fontWeight: "300" }}>
+                  <i class="fas fa-exclamation-triangle"></i> Something went wrong. No results were found for your search !
+                </h2>
                 <br />
                 <br />
                 <br />
