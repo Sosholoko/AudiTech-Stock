@@ -11,7 +11,10 @@ function App() {
     <div className="container">
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <h1 style={{ marginTop: "20px", marginLeft: "30px", fontSize: "30px", fontStyle: "italic" }}>
-          Finan.Stock <i class="fas fa-chart-line"></i>
+          Finan.
+          <span style={{ color: "rgb(84, 197, 118)" }}>
+            Stock <i class="fas fa-chart-line"></i>
+          </span>
         </h1>
         <Profile />
       </div>
