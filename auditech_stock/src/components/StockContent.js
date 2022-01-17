@@ -51,7 +51,7 @@ const StockContent = () => {
             </h1>
           </div>
           <div className="filter_sec">
-            <h3>Filter Results</h3>
+            <h3>Search By Filter</h3>
             <br></br>
             <select name="exchange" id="stock" value={selectFil} onChange={handleChange}>
               {datas.map((data, i) => {
@@ -63,6 +63,7 @@ const StockContent = () => {
                 return <option value="market">{data.market}</option>;
               })}
             </select>
+            <br />
             <button onClick={() => findMatch(selectFil)}>Filter</button>
           </div>
           <div className="card_content">
@@ -70,17 +71,7 @@ const StockContent = () => {
               datas.length > 0 &&
               datas.map((data, i) => {
                 return (
-                  <div
-                    key={data}
-                    style={{
-                      height: "200px",
-                      width: "600px",
-                      alignItems: "center",
-                      margin: "20px 30px",
-                      borderRadius: "20px",
-                      backgroundColor: "rgba(98, 98, 98, 0.479)"
-                    }}
-                  >
+                  <div className="card_style" key={data}>
                     <div className="card_info">
                       <div className="logo_sn">
                         <h4 id="stock_sn">{data.shortName}</h4>

@@ -9,12 +9,7 @@ export default function Modal(props) {
     setModal(!modal);
   };
 
-  if (props.tradeable === true) {
-    booleanStr = "Yes";
-  } else {
-    booleanStr = "No";
-  }
-  if (props.triggerable === true) {
+  if (props.tradeable === true || props.triggerable === true) {
     booleanStr = "Yes";
   } else {
     booleanStr = "No";

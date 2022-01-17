@@ -11,7 +11,6 @@ const LoginButton = () => {
           border: "none",
           padding: "20px",
           fontSize: "20px",
-          marginTop: "10px",
           borderRadius: "10px",
           backgroundColor: "rgb(67, 180, 114)",
           color: "white",
